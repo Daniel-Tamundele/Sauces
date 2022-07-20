@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePageActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenue sur Sauces"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/List_Doc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List Doc" />
+
+    <Button
+        android:id="@+id/Profil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Profil" />
+
+    <Button
+        android:id="@+id/Ajout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ajout Doc" />
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AjoutDocActivity"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <EditText
+            android:hint="Descruption"
+            android:id="@+id/Descruption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine" />
+
+        <EditText
+            android:hint="Promotion"
+            android:id="@+id/Promotion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:hint="Categorie"
+            android:id="@+id/Categorie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:hint="Date"
+            android:id="@+id/Date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/Ajouter_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajouter photo"
+            android:textAllCaps="false"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/Nom_Image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nom Image"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/Ajouter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajouter"
+            android:textAllCaps="false"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/Progression_Bar_Ajout_Doc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+
+</FrameLayout>
