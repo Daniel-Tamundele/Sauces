@@ -35,12 +35,15 @@
             android:inputType="textPassword"
             android:layout_marginTop="20dp"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/Sabmit"
+            app:shapeAppearanceOverlay="@style/forme_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="Se connecter" />
+            android:text="Se connecter"
+            android:textAllCaps="false"
+            android:layout_marginTop="30dp"/>
+
     </LinearLayout>
     <ProgressBar
         android:id="@+id/Progression_Bar"

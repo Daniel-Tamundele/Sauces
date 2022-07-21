@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class AjoutDocActivity extends AppCompatActivity {
+    /* DECLARATION DES VARIABLES DE DIFFERANT TYPE */
     private EditText descruption;
     private EditText prommotion;
     private EditText categorie;
@@ -26,18 +27,22 @@ public class AjoutDocActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ajout_doc);
 
-        //initialisation
+         /* APPEL DES FONCTION */
+
+        /* initialisation  */
         initialisation();
 
-        //recuperation
+        /* recuperation  */
         Ajouter_Photo();;
 
-
-
-
-
     }
+
+    /* LES FONCTIONS */
+
+
     private void initialisation(){
+        /* RECUPERATION DES COMPOSANT SUR LE LAYOUT */
+
         descruption = findViewById(R.id.Descruption);
         prommotion = findViewById(R.id.Promotion);
         categorie = findViewById(R.id.Categorie);
@@ -48,22 +53,37 @@ public class AjoutDocActivity extends AppCompatActivity {
         ajouter = findViewById(R.id.Ajout);
     }
 
-
+    /* ECOUTE D'EVENEMENT SUR LE BUTTON */
     private void Ajouter_Photo(){
+        /* AJOUTER PHOTO */
+
         ajouter_photo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //recuperation
+
+            }
+        });
+
+    }
+    private void Ajout(){
+        /* BUTTON AJOUTER */
+
+        ajouter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /* RECUPERATION DES DONNEES DANS LES CHAMPS DE SAISIE */
+
                 String descrupt = descruption.getText().toString();
                 String promo = prommotion.getText().toString();
                 String catego = categorie.getText().toString();
                 String datte = date_depo.getText().toString();
 
+                /* VERIFICATION DES CHAMPS SI IL NE PAS VIDE */
                 if (descrupt.isEmpty()){
                     Toast.makeText(AjoutDocActivity.this,"designation est vide",Toast.LENGTH_LONG).show();
                     return;
                 }else if (promo.isEmpty()){
-                Toast.makeText(AjoutDocActivity.this,"Promotion est vide",Toast.LENGTH_LONG).show();
+                    Toast.makeText(AjoutDocActivity.this,"Promotion est vide",Toast.LENGTH_LONG).show();
                     return;
                 }else if (catego.isEmpty()){
                     Toast.makeText(AjoutDocActivity.this,"Categorie est vide",Toast.LENGTH_LONG).show();
@@ -72,18 +92,10 @@ public class AjoutDocActivity extends AppCompatActivity {
                     Toast.makeText(AjoutDocActivity.this,"date est vide",Toast.LENGTH_LONG).show();
                     return;
                 }else {
+                    /* LE PASAGE DE L'ACTIVITE AAJOUTDOCACTIVITY VER HOMEPAGEACTIVITY */
                     Intent ajouter_PhotoIntent = new Intent(AjoutDocActivity.this,HomePageActivity.class );
                     startActivity(ajouter_PhotoIntent);
                 }
-            }
-        });
-
-    }
-    private void Ajout(){
-        ajouter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
             }
         });
     }

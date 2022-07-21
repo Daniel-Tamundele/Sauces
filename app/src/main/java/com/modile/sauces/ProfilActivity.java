@@ -17,16 +17,18 @@ public class ProfilActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profil);
     }
 
-    //pour recuperer le menu
+    /* POUR RECUPERER LE MNU */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.tolbar_profil,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
-    //pour metre l'ecotuer d'evenement sur le item
+    /* ECOUTER D'EVENEMENT SUR LES ITEM */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        /* ON VERIFIER L'ID */
         if (item.getItemId() == R.id.Modifier_Profil){
             Toast.makeText(ProfilActivity.this,"Modifier",Toast.LENGTH_SHORT).show();
             Intent modifier = new Intent(ProfilActivity.this,Modifier_ProfilActivity.class );

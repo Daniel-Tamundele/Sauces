@@ -17,25 +17,24 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        //********************* pour recuperé les composant depuis les disgin**********************
+        /* RECUPERATION DES COMPOSANTS DEPUIT LE LAYOUT */
 
         EditText editText1 = findViewById(R.id.Matricule);
         EditText editText2 = findViewById(R.id.Password);
         Button button = findViewById(R.id.Sabmit);
         ProgressBar progressBar = findViewById(R.id.Progression_Bar);
 
-        //********************** ecutaire d'evenement ********************************************
-
+        /* ECOUTE D'EVENEMENT SUR LE BUTTON SE CONNECTER */
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //pour recuperé les information sur les champs
+                /* RECUPERATION DES INFORMATION SUR LESCHAMPS */
                 String matricule = editText1.getText().toString();
                 String password = editText2.getText().toString();
 
-                //verificatioon des champs de sesi
+                /* VERIFICATION DES CHAMPS SI IL NE PAS VIDE*/
                 if (matricule.isEmpty()){
-                    Toast.makeText(LoginActivity.this,"Matricule est vide",Toast.LENGTH_LONG).show();//pour envoyer un message
+                    Toast.makeText(LoginActivity.this,"Matricule est vide",Toast.LENGTH_LONG).show();
                     return;
 
                 }else if (password.isEmpty()){
@@ -43,11 +42,16 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }else {
 
-                    progressBar.setVisibility(View.VISIBLE);//pour randre visible
+                    /* VISIBILITER DE LA BAR DE PROGRESTION */
+                    progressBar.setVisibility(View.VISIBLE);
+
+                    /* DESACTIVATION DU BUTON SE CONNECTER */
                     button.setEnabled(false);//pour desactiver un conposant
 
-                    //pour changer l'etat de variabledans la session
-                    SharedPreferences session = getSharedPreferences("session",0);//declarationde la session
+                    /* DECLARATION DE LA SSSION */
+                    SharedPreferences session = getSharedPreferences("session",0);
+
+                    // /* POUR CHAMGER L'ETAT DE LA VARIABLE DE LA SESSION */
                     session.edit().putBoolean("session_active",true).apply();
 
                 }

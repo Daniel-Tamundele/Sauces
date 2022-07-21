@@ -15,23 +15,30 @@
         android:text="Bienvenue sur Sauces"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/List_Doc"
+        app:shapeAppearanceOverlay="@style/forme_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="List Doc" />
+        android:text="List Doc"
+        android:textAllCaps="false"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/Profil"
+        app:shapeAppearanceOverlay="@style/forme_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Profil" />
+        android:text="Profil"
+        android:textAllCaps="false"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/Ajout"
+        app:shapeAppearanceOverlay="@style/forme_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ajout Doc" />
+        android:text="Ajout Doc"
+        android:textAllCaps="false"/>
+
 </LinearLayout>
