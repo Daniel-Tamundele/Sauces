@@ -14,22 +14,25 @@
         android:theme="@style/Theme.Sauces"
         tools:targetApi="31">
         <activity
-            android:label="ListDoc"
-            android:parentActivityName=".HomePageActivity"
+            android:parentActivityName=".ProfilActivity"
+            android:name=".Modifier_ProfilActivity"
+            android:exported="false" />
+        <activity
             android:name=".ListDocActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="ListDoc"
+            android:parentActivityName=".HomePageActivity" />
         <activity
-            android:label="Profil"
-            android:parentActivityName=".HomePageActivity"
             android:name=".ProfilActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Profil"
+            android:parentActivityName=".HomePageActivity" />
         <activity
-            android:label="AjoutDoc"
-            android:parentActivityName=".HomePageActivity"
             android:name=".AjoutDocActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="AjoutDoc"
+            android:parentActivityName=".HomePageActivity" />
         <activity
-            android:label="Accueil"
             android:name=".HomePageActivity"
             android:exported="true">
             <intent-filter>
@@ -39,9 +42,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:label="Login"
             android:name=".LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Login" />
     </application>
 
 </manifest>

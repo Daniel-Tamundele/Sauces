@@ -15,6 +15,8 @@ public class HomePageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
 
+        getSupportActionBar().setTitle("Accueil");
+
         //declarationde la session
         SharedPreferences session = getSharedPreferences("session",0);
 

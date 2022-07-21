@@ -6,12 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".ProfilActivity"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center_horizontal">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/Avatar"
+        app:shapeAppearanceOverlay="@style/forme_image"
+        app:strokeColor="@color/white"
+        app:strokeWidth="4dp"
+        android:padding="6dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@color/black"
+    />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Profil"
-        android:textSize="30sp"/>
+        android:text="Nom"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Matricule"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"/>
 
 </LinearLayout>
