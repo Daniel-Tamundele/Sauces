@@ -32,8 +32,11 @@ public class AjoutDocActivity extends AppCompatActivity {
         /* initialisation  */
         initialisation();
 
-        /* recuperation  */
-        Ajouter_Photo();;
+        /* appel de la fonction  */
+        Ajouter_Photo();
+
+        /* appel de la foncetion  */
+        Ajouter();
 
     }
 
@@ -50,7 +53,7 @@ public class AjoutDocActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.Progression_Bar_Ajout_Doc);
         nom_image = findViewById(R.id.Nom_Image);
         ajouter_photo = findViewById(R.id.Ajouter_photo);
-        ajouter = findViewById(R.id.Ajout);
+        ajouter = findViewById(R.id.Ajouter);
     }
 
     /* ECOUTE D'EVENEMENT SUR LE BUTTON */
@@ -65,7 +68,7 @@ public class AjoutDocActivity extends AppCompatActivity {
         });
 
     }
-    private void Ajout(){
+    private void Ajouter(){
         /* BUTTON AJOUTER */
 
         ajouter.setOnClickListener(new View.OnClickListener() {
@@ -80,16 +83,16 @@ public class AjoutDocActivity extends AppCompatActivity {
 
                 /* VERIFICATION DES CHAMPS SI IL NE PAS VIDE */
                 if (descrupt.isEmpty()){
-                    Toast.makeText(AjoutDocActivity.this,"designation est vide",Toast.LENGTH_LONG).show();
+                    Toast.makeText(AjoutDocActivity.this,"designation est vide",Toast.LENGTH_SHORT).show();
                     return;
                 }else if (promo.isEmpty()){
-                    Toast.makeText(AjoutDocActivity.this,"Promotion est vide",Toast.LENGTH_LONG).show();
+                    Toast.makeText(AjoutDocActivity.this,"Promotion est vide",Toast.LENGTH_SHORT).show();
                     return;
                 }else if (catego.isEmpty()){
-                    Toast.makeText(AjoutDocActivity.this,"Categorie est vide",Toast.LENGTH_LONG).show();
+                    Toast.makeText(AjoutDocActivity.this,"Categorie est vide",Toast.LENGTH_SHORT).show();
                     return;
                 }else if (datte.isEmpty()){
-                    Toast.makeText(AjoutDocActivity.this,"date est vide",Toast.LENGTH_LONG).show();
+                    Toast.makeText(AjoutDocActivity.this,"date est vide",Toast.LENGTH_SHORT).show();
                     return;
                 }else {
                     /* LE PASAGE DE L'ACTIVITE AAJOUTDOCACTIVITY VER HOMEPAGEACTIVITY */
