@@ -42,11 +42,11 @@
         android:layout_marginTop="20dp"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_Modifier_profil"
+        android:id="@+id/Button_Modifier_profil"
         app:shapeAppearanceOverlay="@style/forme_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit"
         android:textAllCaps="false"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="60dp"/>
 </LinearLayout>

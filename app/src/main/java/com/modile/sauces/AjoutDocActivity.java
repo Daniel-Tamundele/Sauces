@@ -42,7 +42,6 @@ public class AjoutDocActivity extends AppCompatActivity {
 
     /* LES FONCTIONS */
 
-
     private void initialisation(){
         /* RECUPERATION DES COMPOSANT SUR LE LAYOUT */
 
